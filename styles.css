@@ -823,13 +823,24 @@ header{
              background-size: contain;
         }
     }
-    .media, .car-banner p, .scroll, .offer-btn, .ulLocation{
+    .offer-btn{
+        align-items: center;
+    }
+    .media, .car-banner p, .scroll, .ulLocation{
         display: none;
     }
-    .items ,.footerSecurity, .getlink{
+    .items ,.footerSecurity{
         display: none;
     }
-   
+    .phone img{
+        padding: 0;
+        margin: 0;
+        width: 163px;
+    }
+    .enquirySection h1{
+        text-align: center;
+        padding-left: 90px;
+    }
     .banner-top{
         .top-text, .block{
             display: none;
@@ -844,7 +855,10 @@ header{
         display: flex;
         width: 50%;
     }
-    .head-text p, .copyright, .socialIcons, .footerContainer{
+    .footerItem{
+        padding: 0;
+    }
+    .head-text p, .socialIcons{
         display: none;
     }
     .subscribe{
@@ -856,12 +870,16 @@ header{
     .offerUpdates, .subscribeInfo{
         display: flex;
         flex-direction: column;
-        width: 80%; 
+        width: 400px; 
     }
-    .subscribeInfo h1{
+    .offerUpdates h1{
         font-size: 6vw;
         display: inline;
         margin: 0px;
+        width: 200px;
+    }
+    .contactInfo{
+        width:90%;
     }
     #subscribe-btn{
         width: 28px;
@@ -893,12 +911,15 @@ header{
     .questionSelect{
         width: 25%;
     }
-    .subscribeInfo,.contactInfo, .footerItems, .footerMenu{
+    .subscribeInfo, .footerMenu{
         width: 45%;
     }
     .footerSection{
-        height: 40px;
+        height: 100px;
         margin-top: 100px;
+    }
+    .footerItems{
+        margin: 0;
     }
 }
 
