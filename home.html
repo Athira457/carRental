@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Car rental website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- header starts here -->
     <header>
         <div class="media">
             <ul>
@@ -21,7 +19,7 @@
         </div>
     <div class="navbar">
         <div class="car">
-            <a href="home.html"><img class="web-logo" src="icons\logo.svg"/></a>
+            <a href="index.html"><img class="web-logo" src="icons\logo.svg"/></a>
             <span id="icon" onclick="toggleMenu()">&#9776;</span>
         </div>
         <ul class="items">
@@ -37,6 +35,7 @@
         <!-- Display on mobile view -->
         <div class="hamburger-menu">
             <ul>
+                <a href="" class="close">X</a>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Offers">Offers</a></li>
                 <li><a href="#Corporate">Corporate</a></li>
@@ -49,12 +48,13 @@
         </div>
     </div>
         <div class="head-text">
-            <p> Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers<p>
+            <marquee> Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers</marquee>
         </div>
     </header>
-    
-    <!-- first section starts here -->
-    <section class="top">
+    <!-- ---------------------------------------------- -->
+
+     <!-- first section starts here -->
+     <section class="top">
         <div class="banner-top">
             <div class="top-text">
                 <a href="" style="text-decoration: underline;">Same as Pick-Up</a>
@@ -68,15 +68,15 @@
                     <select class="location">
                         <option  value="0">Quoz</option>
                     </select>
-                    <input type="text" class="from-date" placeholder="30/10/2023 08:30" onfocus="(this.type='datetime-local')">
-                    <input type="text" class="to-date" placeholder="30/10/2024 08:30" onfocus="(this.type='datetime-local')">
+                    <input type="datetime-local" value="2023-11-29T18:30"  id="datetime-input" name="datetime">
+                    <input type="datetime-local" value="2023-12-29T18:30"  id="datetime-input" name="datetime">
                 </div>
                 <button class="search-btn" onclick="window.location.href = ''"><img src="icons/search.svg" alt=""></button>
                 <div class="bar"></div>
-                <button class="book-btn" onclick="window.location.href = ''">Quick Book</button>
+                <a href="#QuickBook"><button class="book-btn">Quick Book</button></a>
             </div>
         <div class="bottom-text">
-            <p>Download our App for easy accessibility anytime, anywhere!<p>
+            <p>Download our App for easy accessibility anytime, anywhere!</p>
             <a href="https://www.apple.com/" target="_blank"><img src="icons/Group1.svg" alt=""></a>
             <a href="https://play.google.com/" target="_blank"><img src="icons/Group2.svg" alt=""></a>
         </div>
@@ -86,27 +86,43 @@
         <a href="#chatBot" target="_blank"></a><img src="icons/chat.svg" class="chatBot"></a>
     </div>
     </section>
-      <!-- show on mobile view -->
+    <!-- ---------------------------------------------- -->
+
+    <!-- show on mobile view -->
+    <div class="link-text">
+        <a href="" style="text-decoration: underline;">Same as Pick-Up</a>
+        <a href="">Different Drop-Off</a>
+        <select id="vehicle-type">
+            <option value="0">Select vehicle type</option>
+        </select>
+    </div>
+      
       <div class="mobileButton">
         <button class="book">Book a car</button>
         <button class="book">Quick book</button>
     </div>
-    <br>
 
-    <!-- section shows summer promotion starts here -->
-    <section class="car-banner">
-        <p>Recieve guarnteed  <button class="offer-btn"><a href="#" target="_blank">GIFT VOUCHER</a></button>
-            <br>on a monthly hire or lease</p>
-            <div class="scroll">
-                <button class="scroll-btn" class="active"></button>
-                <button class="scroll-btn"></button>
-                <button class="scroll-btn"></button>
-                <button class="scroll-btn"></button>
+     <!-- section shows summer promotion starts here -->
+     <section class="car-banner">
+        <div class="slides">
+            <div class="slide">
+                <p>Receive guaranteed <button class="offer-btn"><a href="#" target="_blank">GIFT VOUCHER</a></button><br>
+                on a monthly hire or lease</p>
             </div>
+            <div class="slide">
+                <p>Special Discount <button class="offer-btn"><a href="#" target="_blank">CLAIM NOW</a></button><br>
+                on selected car models</p>
+            </div>
+            <div class="slide">
+                <p>Exclusive Offer <button class="offer-btn"><a href="#" target="_blank">CHECK OUT</a></button><br>
+                available this month</p>
+            </div>
+        </div>
     </section>
-    
-    <!-- most popular car section starts here -->
-    <section class="container">
+    <!-- ---------------------------------------------- -->
+
+     <!-- most popular car section starts here -->
+     <section class="container">
         <h1>Most Popular Cars</h1>
         <div class="card-container">
             <div class="content">
@@ -126,7 +142,6 @@
                 </div>
             </div>
 
-            <!-- car details included section starts here -->
             <div class="content">
                 <img src="icons/redcar.svg">
                 <div class="description">
@@ -143,37 +158,58 @@
             </div>
         </div>
     </section>
+    <!-- ---------------------------------------------- -->
 
-    <!-- subscribe section starts here -->
+     <!-- subscribe section starts here -->
     <section class="subscribe">
-        <div class="offerUpdates">
-            <div class="subscribeInfo">
-                <h1>Subscribe here for exclusive <br>offers and updates!</h1>
-                <input type="text" name="name" placeholder="Name" id="name">
-                <input type="email" name="email" placeholder="Email" id="email"><br>
-                <p>Don't miss out! enter your email and your name, 
-                then hit subscribe to <br>unlock a world of special 
-                offers and details.</p>
-                <input type="button" id="subscribe-btn" value="Subscribe">
+        <div class="subscribeInfo">
+            <h3>Subscribe here for exclusive offers and updates!</h3>
+            <div class="input-box">
+                <input class="input-field" type="text" placeholder="Name">
+                <input class="input-field" type="email" placeholder="Email">
             </div>
-            <div class="contactInfo">
-                <div class="phone">
-                    <img src="icons/Rectangle.svg" alt="">
-                </div>
-                <div class="getlink">
-                    <p>Enter your number and receive 
-                        a direct link to download the app</p>
-                    <input type="text" id="phone" placeholder="Enter Phone Number"><br>
-                    <input type="button" id="getLink-btn" value="Get Link">
+            <p>Don't miss out! enter your email and your name, then hit subscribe to unlock a world of special
+                offers and details.</p>
+            <a href="#subscribe"><button id="subscribe-btn">Subscribe</button></a>
+        </div>
+        <div class="subscribeInfo">
+            <div class="phoneImage">
+                <img src="./icons/Rectangle.svg" alt="mobile" />
+                <div class="contents">
+                    <p>Enter your number and receive a direct link to download the app</p>
+                    <input type="text" class="enter-number" placeholder="Enter Phone Number" />
+                    <a href=""><button id="getLink-btn">Get the link</button></a>
                     <p>Get in on</p>
-                    <div class="store">
-                        <a href="https://www.apple.com/" target="_blank"><img src="icons/appstore.svg"></a>
-                        <a href="https://play.google.com/" target="_blank"><img src="icons/playstore.svg"></a>
+                    <div class="social-media">
+                        <img src="icons/appstore.svg" alt="app-store">
+                        <img src="icons/playstore.svg" alt="google-app">
                     </div>
                 </div>
-             </div>
+            </div>
+            <div class="red-back-mob">
+                <div class="red-back-row">
+                    <img src="./icons/Rectangle.svg" alt="mobile">
+                    <div class="social-media">
+                        <p>Get in on</p>
+                        <img src="icons/appstore.svg" alt="app-store">
+                        <img src="icons/playstore.svg" alt="google-app">
+
+                        <p>Enter your number and
+                            receive a direct link
+                            to download the app
+                        </p>
+                    </div>
+                </div>
+                <div class="red-back-row2">
+                    <div class="input">
+                        <input type="text" class="input-field" placeholder="Enter the Number">
+                    </div>
+                    <a href=""><button id="getLink-btn">Get the Link</button></a>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- ---------------------------------------------- -->
 
     <!-- rent details section starts here -->
     <section class="rendDetails">
@@ -204,46 +240,72 @@
             </div>
         </div>      
     </section>
+    <!-- ---------------------------------------------- -->
 
-    <!-- location section starts here -->
+     <!-- location section starts here -->
     <section class="locationSection">
         <h1>Locations</h1>
-        <div class="listLocation">
-            <ul class="ulLocation">
-                <li>Dubai</li>
-                <li>Abu Dhabi</li>
-                <li>Sharjah</li>
-                <li>Fujairah</li>
-                <li>Ras Al Khaimah</li>
+            <ul class="locationList">
+                <li><img src="icons/redloc.svg" style="height: 20px;"> Dubai</li>
+                <li><img src="icons/redloc.svg" style="height: 20px;"> Abu Dhabi</li>
+                <li><img src="icons/redloc.svg" style="height: 20px;"> Sharjah</li>
+                <li><img src="icons/redloc.svg" style="height: 20px;"> Fujairah</li>
+                <li><img src="icons/redloc.svg" style="height: 20px;"> Ras Al Khaimah</li>
             </ul>
-        </div>
     </section>
+    <!-- ---------------------------------------------- -->
 
-    <!-- Frequently asked questions included section starts here -->
+    <!-- frequently asked question section -->
     <section class="enquirySection">
         <h1>Frequently asked questions</h1>
-        <div class="questionSelect">
-            <select>
-                <option selected hidden>What is my eligibility to book a car?</option>
-                <option  value="1">You should be of 18 years old and you must possess a valid driving licence</option>
-            </select>
-            <select>
-                <option disabled selected>Can i book for any period of time?</option>
-            </select>
-            <select>
-                <option disabled selected>Can i opt car for a longer period?</option>
-            </select>
-            <select>
-                <option disabled selected>Can i book one-way trip?</option>
-            </select>
-            <select>
-                <option disabled selected>Is there home delivery option available?</option>
-            </select>
-            <select>
-                <option disabled selected>How can i make the payment?</option>
-            </select>
+        <div class="questionContainer">
+            <div class="questionAnswer">
+                <div class="Question">
+                    <h3>What is my eligibility to book a car?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="Answer">
+                    <p>You should be of 18 years old and you must possess a valid driving licence.</p>
+                </div>
+            </div>
+
+            <div class="questionAnswer">
+                <div class="Question">
+                    <h3>Can i book for any period of time?</h3>
+                    <span class="toggle-icon">+</span>
+                </div> 
+            </div>
+
+            <div class="questionAnswer">
+                <div class="Question">
+                    <h3>Can i opt car for a longer period?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>   
+            </div>
+
+            <div class="questionAnswer">
+                <div class="Question">
+                    <h3>Can i book one-way trip?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>   
+            </div>
+
+            <div class="questionAnswer">
+                <div class="Question">
+                    <h3>Is there home delivery option available?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>   
+            </div>
+
+            <div class="questionAnswer">
+                <div class="Question">
+                    <h3>How can i make the payment?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>   
+            </div>
         </div>
     </section>
+    <!-- ---------------------------------------------- -->
 
     <!-- footer section starts here -->
     <footer class="footerSection">
@@ -294,7 +356,54 @@
             </div>
         </div>
     </footer>
-    
+    <div class="mobileFooter">
+        <div class="mobileIcon">
+            <div class="sectionTop">
+                <img src="icons/logofooter.svg" alt="footerlogo">
+                <p>Member of the <br>AI habtoor Group</p>
+                <ul class="social">
+                    <li><a href="" target="_blank"><img src="icons/f.svg"/></a></li>
+                    <li><a href="" target="_blank"><img src="icons/x.svg"/></a></li>
+                    <li><a href="" target="_blank"><img src="icons/insta.svg"/></a></li>
+                    <li><a href="" target="_blank"><img src="icons/in.svg"/></a></li>
+                </ul>
+            </div>
+                <div class="mobileList">
+                    <ul class="link">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Offers">Offers</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>
+                        <li><a href="#career">Career</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#Location">Locations</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms And Conditions</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#Contact">Contact Us</a></li>
+                        <li><a href="#service request">Service Request</a></li>  
+                    </ul>
+                </div>
+        </div>
+
+        <div class="mobieBottom">
+            <p>Al Habtoor Companies</p>
+            <ul class="Companies">
+                <li>Hospitality</li>
+                <li>Real Estate</li>
+                <li>Education</li>
+                <li>Publishing</li>
+                <li>Automotive</li>
+                <li>Vehicle Leasing</li>
+            </ul>
+            <img src="icons/secure.svg" alt="">
+            <div class="copy">
+                <p>&copy; 2018 Car rental LLC - All Rights Reserved. </p>
+            </div>
+        </div>
+            
+    </div>
+    <!-- ---------------------------------------------- -->
+    <!-- java script source -->
     <script src="sample.js"></script>
 </body>
 </html>
